@@ -12,6 +12,10 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
+    <!-- Cloudstitch Integration -->
+    <script src="http://local-cloudstitch.io:3000/release/cloudstitch.dev.js" appkey="7b6dc47ce2c55c0ff3692c595524cd71" autoload="false"></script>
+    <link type="cts/gsheet" name="sheet" href="1_9X62IkeHBl40Xi7qI1sA-vaxt29PJoamDlVv42HxgE" read="private" write="private" />
+
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
@@ -19,13 +23,11 @@
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
+    <script src="js/cs-adaptor.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers.js"></script>
     <script src="js/services.js"></script>
 
-    <!-- Cloudstitch Integration -->
-    <script src="http://local-cloudstitch.io:3000/release/cloudstitch.dev.js" appkey="7b6dc47ce2c55c0ff3692c595524cd71"></script>
-    <link type="cts/gsheet" name="sheet" href="1_9X62IkeHBl40Xi7qI1sA-vaxt29PJoamDlVv42HxgE" read="private" write="private" />
 
   </head>
   <body ng-app="starter" animation="slide-left-right-ios7">

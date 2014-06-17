@@ -15,5 +15,8 @@ angular.module('starter.controllers', [])
   $scope.friend = Entries.get($stateParams.entryId);
 })
 
-.controller('AccountCtrl', function($scope) {
+.controller('AccountCtrl', function($scope, $ionicModal, $ionicLoading) {
+
+
+
 });

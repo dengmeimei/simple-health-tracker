@@ -1,0 +1,20 @@
+var userdata = {
+  weight: [
+    { date: "2014-06-01", weight: 120 },
+    { date: "2014-06-02", weight: 124 },
+    { date: "2014-06-03", weight: 123 },
+    { date: "2014-06-04", weight: 120 },
+  ],
+  wellness: [
+    { date: "2014-06-01", wellness: 1 },
+    { date: "2014-06-02", wellness: 1 },
+    { date: "2014-06-03", wellness: -1 },
+    { date: "2014-06-04", wellness: 0 },
+  ],
+  meals: [
+    { date: "2014-06-01", green: true, meat: false },
+    { date: "2014-06-01", green: false, meat: true },
+    { date: "2014-06-04", green: false, meat: true }
+  ]
+
+}

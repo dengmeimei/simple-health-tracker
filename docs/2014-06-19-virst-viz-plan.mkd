@@ -1,0 +1,29 @@
+First Visualization Plan
+========================
+
+Input Data
+----------
+
+The input data will look like the example file in `webapp/www/example/data-for-graph.json`. 
+
+Measures
+--------
+
+The desired output measures are weight, wellness, percentage of meals with greens, percentage of meals with meat. One measure per day max. Some days will contain missing data.
+
+Data Cleaning
+-------------
+
+* For weight and wellness, if there are multiple values per day, take the average.
+* For meals, for each day, calculate the percentage of meals with green and meat
+* After the cleaning step, the data should like a list of these objects:
+    
+   { date: string, weight: float, wellness: float, percentGreen: float, percentMeat: float }
+
+Graph
+-----
+
+The first cut graph should show all these values juxtaposed against each other. Since we're working with a phone, a vertical graph might be interesting to try out, even though timeseries graphs are typically horizontal. But use your best instincts.
+
+This graph should be written in Javascript (put the code in a function in a new JS file in `webapp/www/js` directory.  And this Javascript will build out the graph in the HTML inside the `webap/www/templates/tab-reflect.html` file. 
+

@@ -1,7 +1,7 @@
 angular.module('starter.controllers', [])
 
 .controller('DailyCtrl', function($scope) {
-  $scope.today = getDateString();
+  refreshCts();
 })
 
 .controller('WheneverCtrl', function($scope) {
@@ -10,10 +10,8 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ReflectCtrl', function($scope, Entries) {
-  $scope.entries = Entries.all();
-  if (CTS && CTS.engine) {
-    CTS.engine.forrest.reloadTreeSpec('body', true);
-  }
+  // $scope.entries = Entries.all();
+  refreshCts();
 })
 
 .controller('EntryDetailCtrl', function($scope, $stateParams, Entries) {

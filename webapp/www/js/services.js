@@ -25,6 +25,14 @@ angular.module('starter.services', [])
   }
 });
 
+function refreshCts() {
+  CTS.status.libraryLoaded.then(function() {
+    CTS.engine.status.booted.then(function() {
+      CTS.engine.forrest.reloadTreeSpec('body', true);
+    });
+  });
+}
+
 function getDateString() {
   var today = new Date();
   var dd = today.getDate();

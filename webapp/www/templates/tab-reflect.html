@@ -1,9 +1,30 @@
 <ion-view title="Reflect">
   <ion-content class="has-header">
-    <ion-list>
+    <h2>Weight History</h2>
+    <ul data-cts="this :are sheet|Weight!items;">
+      <li><span data-cts="this :is sheet|Weight!.date;"></span> - <span data-cts="this :is sheet|Weight!.weight;"></span></li>
+    </ul>
+    <h2>Wellness History</h2>
+    <ul data-cts="this :are sheet|Wellness!items;">
+      <li><span data-cts="this :is sheet|Wellness!.date;"></span> - <span data-cts="this :is sheet|Wellness!.delta;"></span></li>
+    </ul>
+
+    <h2>Meal History</h2>
+    <ul data-cts="this :are sheet|Meals!items;">
+      <li>
+        <span data-cts="this :is sheet|Meals!.date;"></span> 
+        - <span data-cts="this :is sheet|Meals!.time;"></span>
+        - <span data-cts="this :is sheet|Meals!.green;"></span>
+        - <span data-cts="this :is sheet|Meals!.meat;"></span>
+      </li>
+    </ul>
+
+
+
+<!--     <ion-list>
       <ion-item ng-repeat="entry in entries" type="item-text-wrap" href="#/tab/reflect/{{entry.id}}">
         {{entry.name}}
       </ion-item>
-    </ion-list>
+    </ion-list> -->
   </ion-content>
 </ion-view>

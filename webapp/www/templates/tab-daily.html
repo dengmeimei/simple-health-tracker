@@ -9,22 +9,22 @@
       <div class="row">
         <div class="col col-25">
           <form data-cts="this :graft sheet|Wellness!items {createNew:true};">
-            <input type="hidden" value="{{today}}" connect="Wellness!.date">
-            <input type="hidden" value="-1" connect="Wellness!.delta">
+            <input type="hidden" value="{{today}}" data-cts="this :is sheet|Wellness!.date;">
+            <input type="hidden" value="-1" data-cts="this :is sheet|Wellness!.delta;">
             <button class="button button-full button-energized">Worse</button>
           </form>
         </div>
         <div class="col col-50">
           <form data-cts="this :graft sheet|Wellness!items {createNew:true};">
-            <input type="hidden" value="{{today}}" connect="Wellness!.date">
-            <input type="hidden" value="0" connect="Wellness!.delta">
-            <button class="button button-full button-positive">Same <br />(or not sure)</button>
+            <input type="hidden" value="{{today}}" data-cts="this :is sheet|Wellness!.date;">
+            <input type="hidden" value="0" data-cts="this :is sheet|Wellness!.delta;">
+            <button class="button button-full button-positive">Same</button>
           </form>
         </div>
         <div class="col col-25">
           <form data-cts="this :graft sheet|Wellness!items {createNew:true};">
-            <input type="hidden" value="{{today}}" connect="Wellness!.date">
-            <input type="hidden" value="1" connect="Wellness!.delta">
+            <input type="hidden" value="{{today}}" data-cts="this :is sheet|Wellness!.date;">
+            <input type="hidden" value="1" data-cts="this :is sheet|Wellness!.delta;">
             <button class="button button-full button-balanced">Better</button>
           </form>
         </div>
@@ -37,12 +37,12 @@
       How much do you weigh?
     </div>
     <div class="item item-text-wrap">
-      <form connect="weight!rows">
+      <form data-cts="this :graft sheet|Weight!items {createNew:true};">
         <div class="list list-inset">
           <label class="item item-input">
-            <input type="number" placeholder="Weight">
+            <input type="number" placeholder="Weight" data-cts="this :is sheet|Weight!.weight;">
           </label>
-          <input type="hidden" value="{{today}}" connect="date">
+          <input type="hidden" value="{{today}}" data-cts="this :is sheet|Weight!.date;">
           <button class="button button-full button-positive">Record</button>
         </div>
       </form>

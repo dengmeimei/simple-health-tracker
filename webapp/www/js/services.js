@@ -42,3 +42,10 @@ function getDateString() {
   var today = yyyy + "-" + mm + "-" + dd;
   return today;
 }
+
+function getTimeString() {
+  var today = new Date();
+  var dd = today.getHours();
+  var mm = today.getMinutes();
+  return dd + ":" + mm;
+}

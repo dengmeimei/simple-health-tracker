@@ -15,9 +15,19 @@
     -->
 
     <!-- Cloudstitch Integration -->
-    <script src="http://local-cloudstitch:3000/release/cloudstitch.dev.js" appkey="7b6dc47ce2c55c0ff3692c595524cd71" autoload="false"></script>
+    <script src="http://local-cloudstitch.io:3000/release/cloudstitch.dev.js?autoload=false" appkey="7b6dc47ce2c55c0ff3692c595524cd71" autoload="false"></script>
 
-    <link type="cts/gsheet" name="sheet" href="1_9X62IkeHBl40Xi7qI1sA-vaxt29PJoamDlVv42HxgE" read="private" write="private" />
+    <link type="cts/gsheet" name="sheet" href="auto" read="private" write="private" />
+
+    <script>
+      // We'll load CTS manually
+      CTS.status.libraryLoaded.then(function() {
+        CTS.engine = new CTS.Engine();
+        CTS.engine.renderlessBoot().then(function() {
+          CTS.Util.Ionic.hideLoadingModal();
+        });
+      });
+    </script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -32,7 +42,7 @@
     <script src="js/services.js"></script>
 
   </head>
-  <body ng-app="starter" animation="slide-left-right-ios7">
+  <body ng-app="starter" animation="slide-left-right-ios7" data-ctsautoload="false">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->

@@ -5,10 +5,15 @@ angular.module('starter.controllers', [])
 })
 
 .controller('WheneverCtrl', function($scope) {
+  $scope.today = getDateString();
+  $scope.theTime =getTimeString();
 })
 
 .controller('ReflectCtrl', function($scope, Entries) {
   $scope.entries = Entries.all();
+  if (CTS && CTS.engine) {
+    CTS.engine.forrest.reloadTreeSpec('body', true);
+  }
 })
 
 .controller('EntryDetailCtrl', function($scope, $stateParams, Entries) {
@@ -17,6 +22,5 @@ angular.module('starter.controllers', [])
 
 .controller('AccountCtrl', function($scope, $ionicModal, $ionicLoading) {
 
-
-
 });
+  

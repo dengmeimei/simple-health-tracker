@@ -89,6 +89,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/daily');
 
-})
+});
 
-.run(CTS.Util.Ionic.ionicAppStartup);
+// .run(CTS.Util.Ionic.ionicAppStartup);
+// .run(function() {});

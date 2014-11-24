@@ -15,18 +15,25 @@
     -->
 
     <!-- Cloudstitch Integration -->
-    <script src="http://cloudstitch.io/release/cloudstitch.js?autoload=false" appkey="c3655056acf5236e8d0462471aad5a08" autoload="false"></script>
-
-    <link type="cts/gsheet" name="sheet" href="auto" read="private" write="private" />
+    <script src="http://cloudstitch.io/release/cloudstitch-0.9.10.js" app="ted/simple-health-tracker"></script>
+    <link type="cloudstitch/gsheet" href="http://cloudstitch.io/ted/simple-health-tracker/datasource/sheet" />
 
     <script>
       // We'll load CTS manually
-      CTS.status.libraryLoaded.then(function() {
-        CTS.engine = new CTS.Engine();
-        CTS.engine.renderlessBoot().then(function() {
-          CTS.Util.Ionic.hideLoadingModal();
-        });
-      });
+    //   CTS.status.libraryLoaded.then(function() {
+    //     CTS.Util.Ionic._rootScope = $rootScope;
+    //     CTS.Util.Ionic._ionicLoading = $ionicLoading;
+    //     CTS.Util.Ionic._ionicModal = $ionicModal;
+
+
+    //     CTS.engine = new CTS.Engine();
+    // CTS.Util.Ionic._rootScope = $rootScope;
+    // CTS.Util.Ionic._ionicLoading = $ionicLoading;
+    // CTS.Util.Ionic._ionicModal = $ionicModal;
+
+    //       CTS.Util.Ionic.hideLoadingModal();
+    //     });
+    //   });
     </script>
 
     <!-- ionic/angularjs js -->

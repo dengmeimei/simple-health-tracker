@@ -1,0 +1,60 @@
+<html>
+    <head>
+	    <script src="http://cloudstitch.io/release/cloudstitch-0.9.10.js" app="ted/simple-health-tracker"></script>
+	    <link type="cloudstitch/gsheet" href="http://cloudstitch.io/ted/simple-health-tracker/datasource/sheet" />
+	    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+	    <script src="dates.js"></script>
+
+	</head>
+	<body>
+
+	<h4>What do you weigh?</h4>
+	<form connect="Weight!rows">
+      <input type="number" placeholder="Weight" connect="Weight!col(weight)">
+      <input type="hidden"  class='date' value="{{today}}" connect="Weight!col(date)">
+      <button class="button button-full button-positive">Record</button>
+	</form>
+
+	<h4>How do you feel?</h4>
+
+	<form connect="Wellness!rows">
+	    <input type="hidden" class='date' value="{{today}}" connect="Wellness!col(date)">
+	    <input type="hidden" value="-1" connect="Wellness!col(delta)")>
+	    <button class="button button-full button-energized">Worse</button>
+    </form>
+
+	<form connect="Wellness!rows">
+		<input type="hidden" class='date' value="{{today}}" connect="Wellness!col(date)">
+		<input type="hidden" value="0" connect="Wellness!col(delta)")>
+		<button class="button button-full button-positive">Same</button>
+	</form>
+
+	<form connect="Wellness!rows">
+		<input type="hidden" class='date' value="{{today}}" connect="Wellness!col(date)">
+		<input type="hidden" value="1" connect="Wellness!col(delta)")>
+		<button class="button button-full button-balanced">Better</button>
+	</form>
+
+	<h4>What did you just eat?</h4>
+
+	<form class="padding" connect="Meals!rows">
+		<input type="hidden" class="date" value="{{today}}" connect="Meals!col(date)">
+		<input type="hidden" class="time" value="{{theTime}}"  connect="Meals!col(time)">
+		<li class="item item-checkbox">
+		   <label class="checkbox">
+		     <input type="checkbox" connect="Meals!col(green)">
+		   </label>
+		   Something <span style="font-weight: bold; color: green">green</span>
+		</li>
+		<li class="item item-checkbox">
+		   <label class="checkbox">
+		     <input type="checkbox" connect="Meals!col(meat)">
+		   </label>
+		   Something made of <span style="font-weight: bold; color: brown">meat</span>
+		</li>
+		<button class="button button-full button-positive">Record</button>
+	</form>
+
+
+	</body>
+</html>

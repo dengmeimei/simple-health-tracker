@@ -1,8 +1,8 @@
 <ion-view title="Record Meal or Snack">
   <ion-content class="has-header">
-    <form class="padding" data-cts="this :graft sheet|Meals!items {createNew:true};">
-    <input type="hidden" value="{{today}}" data-cts="sheet|Meals!.date :is this;">
-    <input type="hidden" value="{{theTime}}"  data-cts="sheet|Meals!.time :is this;">
+    <form class="padding" connect="Meals!rows">
+    <input type="hidden" value="{{today}}" connect="Meals!col(date)">
+    <input type="hidden" value="{{theTime}}"  connect="Meals!col(time)">
 
     <div class="list card">
       <div class="item item-divider">
@@ -11,13 +11,13 @@
       <div class="item item-text-wrap">
         <li class="item item-checkbox">
            <label class="checkbox">
-             <input type="checkbox" data-cts="sheet|Meals!.green :is this;">
+             <input type="checkbox" connect="Meals!col(green)">
            </label>
            ..and it had <span style="font-weight: bold; color: green">green</span>
         </li>
         <li class="item item-checkbox">
            <label class="checkbox">
-             <input type="checkbox" data-cts="sheet|Meals!.meat :is this;">
+             <input type="checkbox" connect="Meals!col(meat)">
            </label>
            ..and it had <span style="font-weight: bold; color: brown">meat</span>
         </li>

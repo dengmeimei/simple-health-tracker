@@ -1,7 +1,7 @@
 First Visualization Plan
 ========================
 
-Input Data
+Input Data d
 ----------
 
 The input data will look like the example file in `webapp/www/example/data-for-graph.json`. 

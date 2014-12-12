@@ -1,4 +1,4 @@
-Green Box
+Green Box Test
 =========
 
 Green Box is an example self-experimentation app for food, weight, and wellness.
